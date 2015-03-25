@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Merlin Helps!</title>
+   <link href="favicon.png" rel="shortcut icon">
+<!--   <link rel="shortcut icon" href="/favicon.ico" /> -->
+  <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
+  <link href="vendor/angular-cron-jobs/dist/angular-cron-jobs.css" rel="stylesheet">
+
+  <link href="stylesheets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<ng-include src="'home/views/navbar.html'"></ng-include>
+
+<div ng-view class="fadeZoom"></div>
+
+<!-- Third-party Libraries -->
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-route/angular-route.js"></script>
+<script src="vendor/angular-messages/angular-messages.js"></script>
+<script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+<script src="vendor/angular-animate/angular-animate.js"></script>
+<script src="vendor/angular-touch/angular-touch.js"></script>
+<script src="vendor/angular-cron-jobs/dist/angular-cron-jobs.js"></script>
+<script src="vendor/angular-strap/dist/angular-strap.js"></script>
+<script src="vendor/angular-strap/dist/angular-strap.tpl.js"></script>
+<script src="vendor/cron-parser/dist/cron-parser.js"></script>
+<script src="vendor/later/later.js"></script>
+<script src="vendor/satellizer/satellizer.js"></script>
+<!-- <script src="https://www.youtube.com/iframe_api"></script>
+<script src="vendor/angular-youtube-mb/dist/angular-youtube-embed.min.js"></script> -->
+
+<!-- Application Code -->
+<script src="app.js"></script>
+<script src="home/navbar.js"></script>
+ <script src="home/imgctrl.js"></script>
+<!--  <script src="home/vidctrl.js"></script> -->
+<script src="profile/profile.module.js"></script>
+<script src="profile/profile.controller.js"></script>
+<script src="profile/profile.accountService.js"></script>
+<script src="auth/auth.module.js"></script>
+<script src="auth/directives/passwordStrength.js"></script>
+<script src="auth/directives/passwordMatch.js"></script>
+<script src="auth/auth.login.js"></script>
+<script src="auth/auth.signup.js"></script>
+<script src="auth/auth.logout.js"></script>
+<script src="posts/posts.js"></script>
+<script src="posts/postsController.js"></script>
+<script src="posts/postsService.js"></script>
+<script src="reminders/reminders.js"></script>
+<script src="reminders/remindersController.js"></script>
+<script src="reminders/remindersService.js"></script>
+ <script src="kids/kids.js"></script>
+ <script src="kids/slidingpuzzle.js"></script>
+ <script src="kids/wordsearch.js"></script>
+ <script src="act/act.js"></script>
+ <script src="act/actController.js"></script>
+ <script src="act/actService.js"></script>
+
+
+</body>
+</html>

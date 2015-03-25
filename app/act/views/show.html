@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h1 class="panel-title pull-left">{{actsCtl.act.title}}</h1>
+      <div class="btn-group pull-right" ng-if="actsCtl.isAuthenticated()">
+        <a class="btn btn-warning" href="#/acts/{{actsCtl.act._id}}/edit">Edit</a>
+        <a class="btn btn-danger" ng-click="actsCtl.deleteAct(actsCtl.act._id)">Delete</a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <section>
+              <p>{{actsCtl.act.content}}</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

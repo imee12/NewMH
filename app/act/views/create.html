@@ -1,0 +1,27 @@
+
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading"><h1>New Activities</h1></div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <section>
+            <div class="form-group">
+              <label for="newTitle">Actvity</label>
+              <input class="form-control" type="text" name="newTitle" data-ng-model="act.title" placeholder="Title">
+            </div>
+            <div class="form-group">
+              <label for="newContent">Description</label>
+              <textarea class="form-control" name="newContent" data-ng-model="act.content"></textarea>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" data-ng-click="actsCtl.createAct(act)">Create</button>
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

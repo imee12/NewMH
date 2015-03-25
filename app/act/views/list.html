@@ -1,0 +1,26 @@
+<div class="container">
+  <div>
+    <img src="images/cat2.png" alt="">
+    <h5>Create Fun and Healthy Activities!</h5>
+
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h1 class="panel-title pull-left">Activities!</h1>
+      <div class="btn-group pull-right">
+        <a ng-if="actsCtl.isAuthenticated()" href="#/acts/new" class="btn btn-success btn-sm">Create New Activity</a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <section data-ng-repeat="act in actsCtl.acts">
+              <h2>{{act.title}}</h2>
+              <p>{{act.content | limitTo: 255}}</p>
+              <a href="#/acts/{{act._id}}">view more</a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

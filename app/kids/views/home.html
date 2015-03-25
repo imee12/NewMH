@@ -1,0 +1,17 @@
+
+<div class="words">
+<h4>DIABETES WORD SEARCH</h4>
+<div class="type" ng-include="type">  </div>
+ <script type="text/ng-template" id="word-search-puzzle"> </script>
+  <div id="word-search" ng-controller="wordSearchCtrl">
+    <ul class="words">
+      <li ng-repeat="word in puzzle.words" ng-class="{'found': word.found}">
+        {{word.name}}
+      </li>
+    </ul>
+    <word-search-puzzle matrix="matrix" words="words" api="puzzle"></word-search-puzzle>
+    <div class="status">
+      <button ng-click="puzzle.solve()" ng-show="!puzzle.solved" class="solve">solve</button>
+      <strong ng-show="puzzle.solved" ng-show="puzzle.solved">Solved!</strong>
+    </div>
+  </div>

@@ -1,0 +1,63 @@
+
+
+	<!-- <ul id="types">
+		<li ng-repeat="t in types" ng-class="{'selected': t.id == type}">
+			<a ng-href="#/{{t.id}}">{{t.title}}</a>
+		</li>
+	</ul> <-->
+<a class="kidsmenu" href="/#/kids/words">Word Search</a>
+
+	<div ng-include="type"></div>
+<div class="puzzcats">
+	<fieldset class="puzcat" id="sliding-simple">
+		<legend>Merlin!</legend>
+		<sliding-puzzle size="3x3" src="images/cat1.png"></sliding-puzzle>
+	</fieldset>
+
+	<fieldset class="puzcat" id="sliding-simple">
+		<legend>Moxie!</legend>
+		<sliding-puzzle size="3x3" src="images/cat2.png"></sliding-puzzle>
+
+	</fieldset>
+	<fieldset class="puzcat" id="sliding-simple">
+		<legend>Mollie!</legend>
+		<sliding-puzzle size="3x3" src="images/blackcat.png"></sliding-puzzle>
+	</fieldset>
+	<fieldset class="puzcat" id="sliding-simple">
+		<legend>Mixon!</legend>
+		<sliding-puzzle size="3x3" src="images/browncat.png"></sliding-puzzle>
+	</fieldset>
+
+	<fieldset class="puzcat" id="sliding-simple">
+		<legend>Mozz!</legend>
+		<sliding-puzzle size="3x3" src="images/orangecat.png"></sliding-puzzle>
+	</fieldset>
+	<fieldset class="puzcat" id="sliding-simple">
+		<legend>Mugsy!</legend>
+		<sliding-puzzle size="3x3" src="images/whitecat.png"></sliding-puzzle>
+	</fieldset>
+</div>
+
+	<script type="text/ng-template" id="sliding-puzzle">
+		<fieldset id="sliding-simple">
+			<legend>Eating Healthy!</legend>
+			<sliding-puzzle size="3x3" src="img/healthfood.png"></sliding-puzzle>
+		</fieldset><br/>
+
+
+	</script>
+
+	<script type="text/ng-template" id="word-search-puzzle">
+		<div id="word-search" ng-controller="wordSearchCtrl">
+			<ul class="words">
+				<li ng-repeat="word in puzzle.words" ng-class="{'found': word.found}">
+					{{word.name}}
+				</li>
+			</ul>
+			<word-search-puzzle matrix="matrix" words="words" api="puzzle"></word-search-puzzle>
+			<div class="status">
+				<button ng-click="puzzle.solve()" ng-show="!puzzle.solved" class="solve">solve</button>
+				<strong ng-show="puzzle.solved" ng-show="puzzle.solved">Solved!</strong>
+			</div>
+		</div>
+	</script>
